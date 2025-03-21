@@ -33,3 +33,13 @@ services:
     cap_add:
       - NET_ADMIN
     privileged: true
+  omni-bare-metal-infra-provider:
+    restart: always
+    container_name: omni-bare-metal-infra-provider
+    image: ghcr.io/siderolabs/omni-infra-provider-bare-metal:v0.1.0
+    environment:
+      OMNI_ENDPOINT: https://omni.${DOMAIN}
+      OMNI_SERVICE_ACCOUNT_KEY: ${BARE_METAL_INFRA_PROVIDER_KEY}
+    command:
+      - --api-advertise-address=${ADVERTISED_IP}
+      
