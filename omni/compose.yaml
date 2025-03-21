@@ -22,7 +22,7 @@ services:
       - --k8s-proxy-bind-addr=0.0.0.0:8100
       - --advertised-api-url=https://omni.${DOMAIN}
       - --siderolink-api-advertised-url=https://omni.${DOMAIN}:8090/
-      - --siderolink-wireguard-advertised-addr= ${ADVERTISED_IP}:50180
+      - --siderolink-wireguard-advertised-addr=${ADVERTISED_IP}:50180
       - --advertised-kubernetes-proxy-url=https://omni.${DOMAIN}:8100/
       - --auth-auth0-enabled=true
       - --auth-auth0-domain=${AUTH0_DOMAIN}
