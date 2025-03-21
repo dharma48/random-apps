@@ -42,4 +42,4 @@ services:
       OMNI_SERVICE_ACCOUNT_KEY: ${BARE_METAL_INFRA_PROVIDER_KEY}
     command:
       - --api-advertise-address=${ADVERTISED_IP}
-      
+    network_mode: host
