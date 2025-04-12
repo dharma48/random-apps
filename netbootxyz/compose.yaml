@@ -1,7 +1,7 @@
 ---
 services:
   netbootxyz:
-    image: ghcr.io/netbootxyz/netbootxyz:0.7.4-nbxyz5@sha256:d3f8c78db3796310b11646b4b7e50134706305d83665c2811ce5c34579418a17
+    image: ghcr.io/netbootxyz/netbootxyz:0.7.5-nbxyz5@sha256:d0afc9da08c25f1a6f6b5442a741a9ab11057abc7fff498275d76adc13438866
     container_name: netbootxyz
     environment:
       - MENU_VERSION=2.0.84 # optional
