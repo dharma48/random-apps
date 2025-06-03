@@ -1,0 +1,10 @@
+services:
+  rtlamr:
+    container_name: rtlamr2mqtt
+    image: allangood/rtlamr2mqtt@sha256:b9603f1ce8b56678dbdef074d8adb8db74a3d3dc3a5a35012fddc8b2477703f8
+    restart: unless-stopped
+    devices:
+      - /dev/bus/usb
+    volumes:
+      - /root/wireless-stack/rtlamr2mqtt/rtlamr2mqtt.yaml:/etc/rtlamr2mqtt.yaml:ro
+      - /root/wireless-stack/rtlamr2mqtt/data:/var/lib/rtlamr2mqtt
