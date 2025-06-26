@@ -6,5 +6,5 @@ services:
     devices:
       - /dev/bus/usb
     volumes:
-      - /root/wireless-stack/rtlamr2mqtt/rtlamr2mqtt.yaml:/etc/rtlamr2mqtt.yaml:ro
-      - /root/wireless-stack/rtlamr2mqtt/data:/var/lib/rtlamr2mqtt
+      - /opt/rtlamr2mqtt/rtlamr2mqtt.yaml:/etc/rtlamr2mqtt.yaml:ro
+      - /opt/rtlamr2mqtt/data:/var/lib/rtlamr2mqtt
