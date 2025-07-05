@@ -1,7 +1,7 @@
 services:
   rtlamr:
     container_name: rtlamr2mqtt
-    image: allangood/rtlamr2mqtt:dev@sha256:ecdee18e677f37aec79646c6343653cca1f654ce8da4f8c785d2dda705f89985
+    image: allangood/rtlamr2mqtt:2025.6.6
     restart: unless-stopped
     devices:
       - /dev/bus/usb
