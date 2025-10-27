@@ -1,7 +1,7 @@
 services:
   # python-matter-server
   matter-server:
-    image: ghcr.io/matter-js/python-matter-server:8.1.1
+    image: ghcr.io/matter-js/python-matter-server:8.1.1@sha256:44d47c9ec91bf06fcb72a8df2dd2f36e90934c7b0d1d85f1ecb46fc695164746
     container_name: matter-server
     restart: unless-stopped
     # Required for mDNS to work correctly
