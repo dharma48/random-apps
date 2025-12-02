@@ -36,7 +36,7 @@ services:
   omni-bare-metal-infra-provider:
     restart: always
     container_name: omni-bare-metal-infra-provider
-    image: ghcr.io/siderolabs/omni-infra-provider-bare-metal:v0.7.0@sha256:eafdfff7b2ab32635a4ab035fc77bb1d1f52eaffab063ce025d6fc77fd8bd103
+    image: ghcr.io/siderolabs/omni-infra-provider-bare-metal:v0.7.1@sha256:269698d80c603e53dc4b379c96f268ee280108db9b4c347414bbe470ed62e910
     environment:
       OMNI_ENDPOINT: https://omni.${DOMAIN}
       OMNI_SERVICE_ACCOUNT_KEY: ${BARE_METAL_INFRA_PROVIDER_KEY}
