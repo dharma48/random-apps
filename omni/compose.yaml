@@ -2,12 +2,13 @@ services:
   omni:
     restart: always
     container_name: omni
-    image: ghcr.io/siderolabs/omni:v1.3.4@sha256:8b429932710669766e93dfdd7ca2b378dff3d81bf7b026896d3c541e4109cd7d
+    image: ghcr.io/siderolabs/omni:v1.4.5@sha256:0982a0affbd886e8751c242921a033cfc7151c10f20bc4100f46b6830ba27bcb
     volumes:
       - /home/serveradmin/omni/etcd:/_out/etcd
       - /etc/letsencrypt/live/omni.${DOMAIN}/fullchain.pem:/tls.crt
       - /etc/letsencrypt/live/omni.${DOMAIN}/privkey.pem:/tls.key
       - /home/serveradmin/omni/omni.asc:/omni.asc
+      - /home/serveradmin/omni/config:/config
     command:
       - --account-id=${ACCOUNT_ID}
       - --name=onprem-omni
@@ -29,6 +30,7 @@ services:
       - --auth-auth0-client-id=${AUTH0_CLIENT_ID}
       - --initial-users=${INITIAL_EMAIL}
       - --enable-break-glass-configs
+      - --sqlite-storage-path=/config/db/sqlite.db
     network_mode: host
     cap_add:
       - NET_ADMIN
@@ -43,3 +45,5 @@ services:
     command:
       - --api-advertise-address=${ADVERTISED_IP}
     network_mode: host
+volumes:
+  omni:
