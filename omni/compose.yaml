@@ -2,7 +2,7 @@ services:
   omni:
     restart: always
     container_name: omni
-    image: ghcr.io/siderolabs/omni:v1.5.5@sha256:1080a9782c04695adeec4efc2070bee37d8298ad38b538cf514f4615e920b1f3
+    image: ghcr.io/siderolabs/omni:v1.5.7@sha256:535f53291086c51dce8c7931243cbe9660b6f43d2d51038ac0c697ac3dd3dcbe
     volumes:
       - /home/serveradmin/omni/etcd:/_out/etcd
       - /etc/letsencrypt/live/omni.${DOMAIN}/fullchain.pem:/tls.crt
