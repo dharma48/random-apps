@@ -45,5 +45,14 @@ services:
     command:
       - --api-advertise-address=${ADVERTISED_IP}
     network_mode: host
+  omni-infra-provider-proxmox:
+    image: ghcr.io/siderolabs/omni-infra-provider-proxmox
+    volumes:
+      - /home/serveradmin/omni/proxmox-infra-provider/config.yaml:/config.yaml
+    command: >
+      --config-file /config.yaml
+      --omni-api-endpoint https://omni.${DOMAIN}
+      --omni-service-account-${BARE_METAL_INFRA_PROVIDER_KEY}
+    restart: unless-stopped
 volumes:
   omni:
