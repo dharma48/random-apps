@@ -52,7 +52,7 @@ services:
     command: >
       --config-file /config.yaml
       --omni-api-endpoint https://omni.${DOMAIN}
-      --omni-service-account-key ${BARE_METAL_INFRA_PROVIDER_KEY}
+      --omni-service-account-key ${PROXMOX_INFRA_PROVIDER_KEY}
     restart: unless-stopped
 volumes:
   omni:
