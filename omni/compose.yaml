@@ -46,7 +46,7 @@ services:
       - --api-advertise-address=${ADVERTISED_IP}
     network_mode: host
   omni-infra-provider-proxmox:
-    image: ghcr.io/siderolabs/omni-infra-provider-proxmox@sha256:e67473e5507ab9d4e57ccfd50c416592118d3ca091d0ceb77afbb61862292119
+    image: ghcr.io/siderolabs/omni-infra-provider-proxmox@sha256:28a28a6c9e6b81ac2b86e3a0977b8f3d2da2df84497d8b58a147db987179cc68
     volumes:
       - /home/serveradmin/omni/proxmox-infra-provider/config.yaml:/config.yaml
     command: >
