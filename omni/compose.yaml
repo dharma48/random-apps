@@ -35,16 +35,6 @@ services:
     cap_add:
       - NET_ADMIN
     privileged: true
-  omni-bare-metal-infra-provider:
-    restart: always
-    container_name: omni-bare-metal-infra-provider
-    image: ghcr.io/siderolabs/omni-infra-provider-bare-metal:v0.8.1@sha256:af5779726e629bad399e48e26a2e23a4e727e1dadc5b80a611199c661210f11f
-    environment:
-      OMNI_ENDPOINT: https://omni.${DOMAIN}
-      OMNI_SERVICE_ACCOUNT_KEY: ${BARE_METAL_INFRA_PROVIDER_KEY}
-    command:
-      - --api-advertise-address=${ADVERTISED_IP}
-    network_mode: host
   omni-infra-provider-proxmox:
     image: ghcr.io/siderolabs/omni-infra-provider-proxmox@sha256:28a28a6c9e6b81ac2b86e3a0977b8f3d2da2df84497d8b58a147db987179cc68
     volumes:
