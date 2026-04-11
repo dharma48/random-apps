@@ -12,5 +12,7 @@ immich-machine-learning:
   volumes:
     - model-cache:/cache
   restart: always
+  ports:
+    - 3003:3003
 volumes:
   model-cache:
