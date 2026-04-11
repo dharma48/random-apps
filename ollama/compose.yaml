@@ -6,7 +6,7 @@ services:
     pull_policy: always
     tty: true
     restart: unless-stopped
-    image: docker.io/ollama/ollama:0.18.2@sha256:5a5d014aa774f78ebe1340c0d4afc2e35afc12a2c3b34c84e71f78ea20af4ba3
+    image: docker.io/ollama/ollama:0.20.3@sha256:87d71eb588a28c747094ca5d011392a3790f6ea9bd9c87594780ad7c65cc7ed1
     ports:
       - 7869:11434
     environment:
@@ -22,7 +22,7 @@ services:
               capabilities: [gpu]
 
   ollama-webui:
-    image: ghcr.io/open-webui/open-webui:0.8@sha256:ee057955040ce91e3e787e4b7978c9c23e828972c68d01d787ed40f9a307df9f
+    image: ghcr.io/open-webui/open-webui:0.8@sha256:8113fa5510020ef05a44afc0c42d33eabeeb2524a996e3e3fb8c437c00f0d792
     container_name: ollama-webui
     volumes:
       - ollama-webui:/app/backend/data
