@@ -36,7 +36,7 @@ services:
       - NET_ADMIN
     privileged: true
   omni-infra-provider-proxmox:
-    image: ghcr.io/siderolabs/omni-infra-provider-proxmox@sha256:28a28a6c9e6b81ac2b86e3a0977b8f3d2da2df84497d8b58a147db987179cc68
+    image: ghcr.io/siderolabs/omni-infra-provider-proxmox@sha256:6128ea9e8c95fe69cb5757ccbd6685669ef679d3afb64bca4999def2fbced8dd
     volumes:
       - /home/serveradmin/omni/proxmox-infra-provider/config.yaml:/config.yaml
     command: >
