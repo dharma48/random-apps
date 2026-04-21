@@ -2,7 +2,7 @@ services:
   omni:
     restart: always
     container_name: omni
-    image: ghcr.io/siderolabs/omni:v1.6.5@sha256:25c549c78218735bf45a3127b13055a34d98b95358708c0c68ab2e90f350ed2e
+    image: ghcr.io/siderolabs/omni:v1.7.0@sha256:2e536cc8f473db597ffd69ab2058ffa3a23cd22283a6f68b9c98dd4c540c2ff8
     volumes:
       - /home/serveradmin/omni/etcd:/_out/etcd
       - /etc/letsencrypt/live/omni.${DOMAIN}/fullchain.pem:/tls.crt
@@ -31,6 +31,8 @@ services:
       - --initial-users=${INITIAL_EMAIL}
       - --enable-break-glass-configs
       - --sqlite-storage-path=/config/db/sqlite.db
+      - --eula-accept-name=Your Name
+      - --eula-accept-email=${INITIAL_EMAIL}
     network_mode: host
     cap_add:
       - NET_ADMIN
