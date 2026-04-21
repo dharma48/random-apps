@@ -31,6 +31,8 @@ services:
       - --initial-users=${INITIAL_EMAIL}
       - --enable-break-glass-configs
       - --sqlite-storage-path=/config/db/sqlite.db
+      - --eula-accept-name=Your Name
+      - --eula-accept-email=${INITIAL_EMAIL}
     network_mode: host
     cap_add:
       - NET_ADMIN
